@@ -1,4 +1,2 @@
-wnn
-===
-
 Wavelet Neural Network
+===
