@@ -23,6 +23,7 @@ template<typename T>class Array
 		int 	dimxyz;
 		
 		__forceinline__ 
+		
 		void cudaCheckLastError() 
 		{                                          		
 			cudaError_t error = cudaGetLastError();                               			
@@ -35,7 +36,7 @@ template<typename T>class Array
 			}                                                                               
 		}
 		
-	public:
+	public:	
 		Array()
 		{
 			//Initialize array dimension
@@ -108,7 +109,15 @@ template<typename T>class Array
 			cudaMemcpy(d_ptr, h_ptr, (dimxyz)*sizeof(T), cudaMemcpyHostToDevice);
 			cudaCheckLastError();
 		};
-		
+		/**
+		 *  \brief Read the file 
+		 *  
+		 *  \param [in] filename Parameter_Description
+		 *  \param [in] size     Parameter_Description
+		 *  \return Return_Description
+		 *  
+		 *  \details Details
+		 */
 		void ReadFile(char* filename, size_t size)
 		{
 			fstream *fs = new fstream;											
@@ -126,7 +135,15 @@ template<typename T>class Array
 			//Send to GPU immediately
 			HostToDevice();
 		};
-		
+		/**
+		 *  \brief Save the file 
+		 *  
+		 *  \param [in] filename Parameter_Description
+		 *  \param [in] size     Parameter_Description
+		 *  \return Return_Description
+		 *  
+		 *  \details Details
+		 */
 		void SaveFile(char* filename, size_t size)
 		{
 			//Send to CPU immediately
