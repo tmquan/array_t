@@ -1,2 +1,2 @@
-Wavelet Neural Network
+Array Template of CUDA
 ===
