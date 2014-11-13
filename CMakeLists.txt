@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------
-# Top level Wavelet Neural Network
+# Top level Array_Template
 # Author		:	Tran Minh Quan
 # Email			: 	quantm@unist.ac.kr,	quantm@kaist.ac.kr
 # Address		: 	High-performance Visual Computing Lab
@@ -7,20 +7,20 @@
 # ----------------------------------------------------------------------------
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 # ----------------------------------------------------------------------------
-project(DeepNeuralNetwork CXX C)
+project(Array_Template CXX C)
 
 # ----------------------------------------------------------------------------
 # All binary files will be stored here
 # ----------------------------------------------------------------------------
-# set(RESOURCE_INPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/data")
-# set(RUNTIME_OUTPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/bin")
-# set(LIBRARY_OUTPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/lib")
-# set(INCLUDE_HEADER_DIRECTORY 		"${CMAKE_SOURCE_DIR}/include")
+set(CMAKE_RESOURCE_INPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/data")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY 		"${CMAKE_SOURCE_DIR}/lib")
+set(CMAKE_INCLUDE_HEADER_DIRECTORY 		"${CMAKE_SOURCE_DIR}/include")
 
-set(RESOURCE_INPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/data")
-set(RUNTIME_OUTPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/bin")
-set(LIBRARY_OUTPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/lib")
-set(INCLUDE_HEADER_DIRECTORY 		"${CMAKE_BINARY_DIR}/include")
+# set(RESOURCE_INPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/data")
+# set(RUNTIME_OUTPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/bin")
+# set(LIBRARY_OUTPUT_DIRECTORY 		"${CMAKE_BINARY_DIR}/lib")
+# set(INCLUDE_HEADER_DIRECTORY 		"${CMAKE_BINARY_DIR}/include")
 
 # ----------------------------------------------------------------------------
 # Enable nightly test
@@ -30,7 +30,7 @@ enable_testing()
 # ----------------------------------------------------------------------------
 # Process subdirectories 
 # ----------------------------------------------------------------------------
-# dnn.hpp and legacy headers
+# array.hpp and legacy headers
 # add_subdirectory(include)
 
 # libraries directory 
