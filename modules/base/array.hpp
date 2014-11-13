@@ -92,6 +92,11 @@ template<typename T>class Array
 			cudaMalloc((void**)&d_ptr, (dimxyz)*sizeof(T));
 		};
 		
+		~Array()
+		{
+			free(h_ptr);
+			cudaFree(d_ptr);
+		}
 		void DeviceToHost()
 		{
 			cudaMemcpy(h_ptr, d_ptr, (dimxyz)*sizeof(T), cudaMemcpyDeviceToHost);
